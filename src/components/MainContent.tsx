@@ -1,9 +1,8 @@
 import { IName } from "./Name";
 import DisplayNames from "./DisplayNames";
-import { useState } from "react";
 
 export default function MainContent(props: { babyData: IName[] }): JSX.Element {
-  const [babyInfo, setBabyInfo] = useState<IName[]>(props.babyData);
+  const babyInfo: IName[] = props.babyData;
 
   return (
     <>
