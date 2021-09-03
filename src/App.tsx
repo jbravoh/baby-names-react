@@ -1,7 +1,13 @@
-import { greet } from "./utils/greet";
+import babyData from "./baby-data.json";
+import MainContent from "./components/MainContent";
+import "./css/App.css";
 
 function App(): JSX.Element {
-  return <h1>{greet("World")}</h1>;
+  return (
+    <>
+      <MainContent babyData={babyData} />
+    </>
+  );
 }
 
 export default App;
