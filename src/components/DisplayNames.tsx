@@ -3,10 +3,12 @@ import styles from "../css/DisplayNames.module.css";
 
 interface DisplayNamesProps {
   babyInfo: IName[];
+  searchTerm: string;
 }
 
 export default function DislayNames({
   babyInfo,
+  searchTerm,
 }: DisplayNamesProps): JSX.Element {
   babyInfo.sort((a: IName, b: IName) => {
     if (a.name < b.name) {
@@ -18,9 +20,13 @@ export default function DislayNames({
     return 0;
   });
 
-  const showNames = babyInfo.map((baby) => (
-    <Name key={baby.id} id={baby.id} name={baby.name} sex={baby.sex} />
-  ));
+  const showNames = babyInfo
+    .filter((baby) =>
+      baby.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .map((baby) => (
+      <Name key={baby.id} id={baby.id} name={baby.name} sex={baby.sex} />
+    ));
 
   return (
     <>
