@@ -1,0 +1,33 @@
+button {
+  font-size: 12px;
+  font-family: "Indie Flower";
+  color: white;
+  font-weight: bold;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 2px;
+  transition-duration: 0.2s;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.2);
+}
+
+.maleButton {
+  background-color: #00a19d;
+  border: 1px solid #00a19d;
+}
+
+.maleButton:hover {
+  background-color: white;
+  color: #00a19d;
+  cursor: pointer;
+}
+
+.femaleButton {
+  background-color: #e05d5d;
+  border: 1px solid #e05d5d;
+}
+
+.femaleButton:hover {
+  background-color: white;
+  color: #e05d5d;
+  cursor: pointer;
+}
